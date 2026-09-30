@@ -6,7 +6,8 @@ Implements the **Broker architectural pattern** with 3 separate processes: Broke
 
 ## Tech Stack
 
-- Plain Java (no build tool)
+- Java 22
+- Maven build tool
 - Jackson library for JSON marshalling
 - Swing for client GUI
 - TCP sockets for inter-process communication
@@ -23,21 +24,21 @@ Implements the **Broker architectural pattern** with 3 separate processes: Broke
 
 ## How to Build and Run
 
-This project has no build tool. Compile and run the three processes separately:
-
 ```bash
-# Compile all Java files (ensure Jackson JARs are in classpath)
-javac -cp ".:jackson-databind.jar:jackson-core.jar:jackson-annotations.jar" Clases\ java/*.java
+# Build the project
+mvn clean package
 
 # Run the Broker (port 80, 90, 100)
-java -cp ".:jackson-databind.jar:jackson-core.jar:jackson-annotations.jar" broker.Broker
+mvn exec:java -Dexec.mainClass="broker.Broker"
 
 # Run the Server (registers with Broker, listens on port 1080)
-java -cp ".:jackson-databind.jar:jackson-core.jar:jackson-annotations.jar" server.ServerProxy
+mvn exec:java -Dexec.mainClass="server.ServerProxy"
 
 # Run the Client (Swing GUI)
-java -cp ".:jackson-databind.jar:jackson-core.jar:jackson-annotations.jar" client.Client
+mvn exec:java -Dexec.mainClass="client.Client"
 ```
+
+Note: Run each process in a separate terminal. Start the Broker first, then the Server, then the Client.
 
 Demo credentials: `testuser` / `testpass123` or `testuser2` / `testpass456`
 
