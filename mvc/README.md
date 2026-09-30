@@ -9,7 +9,6 @@ Implements the **MVC (Model-View-Controller) pattern** via abstract `Model`, `Vi
 - Java 22
 - Maven build tool
 - Swing for desktop GUI
-- ~9 files, ~311 lines of code
 - No REST API
 
 ## Architecture Details

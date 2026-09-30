@@ -9,7 +9,6 @@ Implements the **Pipes and Filters architectural style** as a **KWIC (Key Word I
 - Java 22
 - Maven build tool
 - CLI application (reads stdin, prints stdout)
-- ~8 files, ~146 lines of code
 - No REST API
 
 ## Architecture Details

@@ -11,7 +11,6 @@ Implements the **Broker architectural pattern** with 3 separate processes: Broke
 - Jackson library for JSON marshalling
 - Swing for client GUI
 - TCP sockets for inter-process communication
-- ~8 files, ~469 lines of code
 
 ## Architecture Details
 
