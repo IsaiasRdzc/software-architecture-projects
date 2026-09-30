@@ -40,7 +40,3 @@ mvn exec:java -Dexec.mainClass="client.Client"
 Note: Run each process in a separate terminal. Start the Broker first, then the Server, then the Client.
 
 Demo credentials: `testuser` / `testpass123` or `testuser2` / `testpass456`
-
-## What This Demonstrates
-
-This project demonstrates how the Broker pattern decouples clients from servers by introducing middleware that handles service discovery, registration, and invocation. The use of proxies for marshalling/unmarshalling and a centralized service registry shows how distributed systems can achieve location transparency and dynamic service binding.

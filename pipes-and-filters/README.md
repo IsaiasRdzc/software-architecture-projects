@@ -9,7 +9,6 @@ Implements the **Pipes and Filters architectural style** as a **KWIC (Key Word I
 - Java 22
 - Maven build tool
 - CLI application (reads stdin, prints stdout)
-- No REST API
 
 ## Architecture Details
 
@@ -32,7 +31,3 @@ mvn exec:java -Dexec.mainClass="com.mycompany.arqui_filtros_y_tuberias.ARQUI_FIL
 ```
 
 Enter a phrase when prompted. The program will output all circular rotations of the words, sorted alphabetically.
-
-## What This Demonstrates
-
-This project demonstrates how complex processing can be decomposed into simple, self-contained transformation stages. Each filter extends an abstract base class with a single method, making filters independent and interchangeable - you can reorder, add, or remove stages without modifying other filters, which is the key benefit of the pipes-and-filters style.
